@@ -1,15 +1,21 @@
-%%with built-in function: 
+%%without built-in function: 
 clc; 
 clear all; 
 close all; 
 x1 = input("Enter first Sequence"); 
 h1 = input("Enter second Sequence"); 
-y1 = conv(x1,h1); 
-disp("The convoluted sequence is: "); 
-disp(y1); 
 l = length(x1); 
 m = length(h1); 
 k = l+m-1; 
+y1 = zeros(1,k); 
+for i=1:l 
+    for j=1:m 
+        y1(i+j-1) = y1(i+j-1) + x1(i)*h1(j); 
+    end 
+end 
+disp("The convoluted sequence is: "); 
+disp(y1); 
+ 
 n1 = 0:1:l-1; 
 n2 = 0:1:m-1; 
 n3 = 0:1:k-1; 
@@ -39,4 +45,3 @@ title("y(n)");
 grid on 
 xlim([-1 k+1]); 
 ylim([0 max(y1)+2]);
-
