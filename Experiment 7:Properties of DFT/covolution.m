@@ -1,0 +1,15 @@
+clc; 
+clear; 
+close all; 
+x1=[1 2 3 4]; 
+x2=[2 1 2 1]; 
+y1=cconv(x1,x2,4); 
+lhsk=fft(y1); 
+x1k=fft(x1); 
+x2k=fft(x2); 
+y2=x1k.*x2k; 
+rhsk=y2; 
+disp('LHS='); 
+disp(lhsk); 
+disp('RHS='); 
+disp(rhsk);
