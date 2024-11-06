@@ -1,0 +1,11 @@
+clc; 
+clear; 
+close all; 
+X=[10  -2 + 2i  -2  -2 - 2i]; 
+N=length(X); 
+n=0:N-1; 
+k=n'; 
+W=exp(1i*2*pi*(k*n)/N); 
+x=X*W/N; 
+disp(x); 
+disp(ifft(X)); 
