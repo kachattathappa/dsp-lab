@@ -1,0 +1,13 @@
+clc; 
+clear; 
+close all; 
+x=[1 2 3 4]; 
+N=length(x); 
+n=0:N-1; 
+k=n'; 
+W=exp(-1i*2*pi*(k*n)/N); 
+X=x*W; 
+disp('Using twiddle factor'); 
+disp(X); 
+disp('Using built-in function'); 
+disp(fft(x)); 
