@@ -29,6 +29,6 @@
   - High Pass Filter
   - Band Pass Filter
   - Band Stop Filter
-10.Familiarization of DSP kit
-11.Generation of Sine Wave using DSP ki
-12.Linear Convolution using DSP kit
+10. Familiarization of DSP kit
+11. Generation of Sine Wave using DSP ki
+12. Linear Convolution using DSP kit
